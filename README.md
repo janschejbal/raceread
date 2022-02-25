@@ -56,5 +56,5 @@ The following software was found to be vulnerable at some point in time:
 
 Shoutout to
 
-* @marten-seemann who pointed me to [Stéphane Chazelas' StackExchange answer](https://unix.stackexchange.com/a/180082) that points this out!
-* @Midar for pointing me to the correct place to find the POSIX documentation and helping me understand some of the details of the issue.
+* [Marten Seemann](https://github.com/marten-seemann) who pointed me to [Stéphane Chazelas' StackExchange answer](https://unix.stackexchange.com/a/180082) that points this out!
+* [Jonathan Schleifer](https://github.com/Midar) for pointing me to the correct place to find the POSIX documentation and helping me understand some of the details of the issue.
