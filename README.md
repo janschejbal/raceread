@@ -40,16 +40,21 @@ If an attacker can e.g. pre-place an attacker controlled directory, symlink, har
 ## Solutions
 
 * Many programming languages allow you to specify mode/permissions when creating the file.
- * If you can't control the place where the file is opened, you may be able to pre-create the file using the secure method first.
+  * If you can't control the place where the file is opened, you may be able to pre-create the file using the secure method first.
 * For temporary files, use `mktemp` (or equivalent) which creates already locked down files and directories.
 * `mkdir --mode` allows you to directly create a directory with a specific mode.
 * The `umask` can be used, although this affects the entire process, making it risky to use in multithreaded applications and you need to restore the original umask afterwards.
+
+### Home directory permissions
+
+In many cases, these files are stored in the user's home directory. Unfortunately, some distributions (including Ubuntu before 21.04) default to creating home directories with world-readable/traversable (`755`) permissions. Ubuntu appears to have [finally changed that in 21.04](https://discourse.ubuntu.com/t/private-home-directories-for-ubuntu-21-04-onwards/19533) for newly created users (if `useradd` is used). To protect yourself, make sure your home directory is only readable by you: `chmod 700 ~`
 
 ## Vulnerable software
 
 The following software was found to be vulnerable at some point in time:
 
 * [Backblaze B2 cli and Python SDK](writeups/backblaze_b2.md)
+* [Microsoft Azure CLI](writeups/microsoft_azure_cli.md) -- not this exact issue, file was simply left world-readable forever
 * (to be continued as advisories are released)
 
 ## Credits
