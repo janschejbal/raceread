@@ -78,8 +78,10 @@ Jan
 * **2022-01-10** MSRC confirms that a case has been opened.
 * **2022-01-16** I follow up, asking whether they were able to confirm the issue.
 * **2022-01-26** I follow up, asking whether they were able to confirm the issue, and announce my intent to follow a disclosure policy [similar to Project Zero](https://googleprojectzero.blogspot.com/2021/04/policy-and-disclosure-2021-edition.html).
+* **2022-01-30** A [commit](https://github.com/AzureAD/microsoft-authentication-extensions-for-python/commit/48bc3d71ecd0fd7e16bb0d9a915b44999cda2cd4) that seems to address the issue is submitted to the MSAL authentication extensions repository. (I only discover this on 2022-03-14.)
 * **2022-02-01** MSRC sends me a survey request.
 * **2022-02-03** MSRC sends me a newsletter.
+* **2022-02-15** [msal-extensions 1.0.0](https://pypi.org/project/msal-extensions/1.0.0/#files) is released, likely fixing the issue where the new version is used. (I only discover this on 2022-03-14.)
 * **2022-02-16** MSRC sends me a survey request.
 * **2022-02-24** I follow up, asking whether they were able to confirm the issue, and reiterate my intent to follow a disclosure policy [similar to Project Zero](https://googleprojectzero.blogspot.com/2021/04/policy-and-disclosure-2021-edition.html).
 * **2022-02-28T19:36:12Z** MSRC confirms that "this report does not meet our bar for servicing in a security update" and is ok to publish.
@@ -88,4 +90,4 @@ Jan
 * **2022-02-28T20:26:57Z** I tell MSRC that I'm going to publish, and to let me know ASAP if the first two mails were a mistake.
 * **2022-03-02** MSRC sends me a survey request.
 * **2022-03-02** Write-up published.
-
+* **2022-03-14** I discover the 2022-01-30 commit and 2022-02-15 release. However, a new install of the CLI still installs the old version of msal-extensions (likely because [azure-cli-core/setup.py limits the version](https://github.com/Azure/azure-cli/blob/88846cd205257cd05fd4f2f3a0b28b72511de6f7/src/azure-cli-core/setup.py#L54)).
