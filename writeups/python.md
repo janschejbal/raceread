@@ -49,4 +49,6 @@ Permission denied
 
 * **2022-02-04** Initial report (and autoresponse).
 * **2022-02-05** Manual response, confirming the issue.
-* **2022-03-02** I followed up, asking whether there are any new developments, and stated that I intend to follow a 90-day disclosure timeline, similar to Project Zero.
+* **2022-03-02** I followed up, asking whether there are any new developments, and stated that I intend to follow a 90-day disclosure timeline, similar to Project Zero (no response received).
+* **2022-09-09** I follow up, announcing that I'll be disclosing soon, and am asked to create an Issue on Github.
+* **2022-09-09** Public disclosure, [public issue](https://github.com/python/cpython/issues/96719) filed
