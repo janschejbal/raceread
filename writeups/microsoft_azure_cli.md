@@ -1,4 +1,4 @@
-# Microsoft Azure CLI
+# Microsoft Azure CLI leaves config world-readable
 
 While looking for software vulerable to the race condition described in the [README](../README.md), I noticed that Microsoft's Azure CLI tool doesn't even attempt to change the permissions, storing credentials in a world-readable file in a world-readable directory (`~/.azure/msal_token_cache.json`).
 
@@ -91,3 +91,4 @@ Jan
 * **2022-03-02** MSRC sends me a survey request.
 * **2022-03-02** Write-up published.
 * **2022-03-14** I discover the 2022-01-30 commit and 2022-02-15 release. However, a new install of the CLI still installs the old version of msal-extensions (likely because [azure-cli-core/setup.py limits the version](https://github.com/Azure/azure-cli/blob/88846cd205257cd05fd4f2f3a0b28b72511de6f7/src/azure-cli-core/setup.py#L54)).
+* **2022-07-15** I verify that this is fixed, even using an old copy of `az` that was likely installed on May 3. I believe this may have been fixed in 2.36.0, released 2022-04-26.

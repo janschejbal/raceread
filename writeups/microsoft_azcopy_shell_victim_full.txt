@@ -1,0 +1,471 @@
+victim@scw-angry-chandrasekhar:~$ rm -rf bin/ lib/
+victim@scw-angry-chandrasekhar:~$ curl -L https://aka.ms/InstallAzureCli | bash
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100  1405  100  1405    0     0   1561      0 --:--:-- --:--:-- --:--:--  2896
+Downloading Azure CLI install script from https://azurecliprod.blob.core.windows.net/install.py to /tmp/azure_cli_install_tmp_sOHbgq.
+######################################################################## 100.0%
+/tmp/azure_cli_install_tmp_sOHbgq: OK
+Running install script.
+-- Verifying Python version.
+-- Python version 3.8.10 okay.
+-- Verifying native dependencies.
+-- Unable to verify native dependencies. dist=ubuntu, version=20.04. Continuing...
+
+===> In what directory would you like to place the install? (leave blank to use '/home/victim/lib/azure-cli'): 
+-- Creating directory '/home/victim/lib/azure-cli'.
+-- We will install at '/home/victim/lib/azure-cli'.
+
+===> In what directory would you like to place the 'az' executable? (leave blank to use '/home/victim/bin'): 
+-- Creating directory '/home/victim/bin'.
+-- The executable will be in '/home/victim/bin'.
+-- Downloading virtualenv package from https://pypi.python.org/packages/source/v/virtualenv/virtualenv-16.7.11.tar.gz.
+-- Downloaded virtualenv package to /tmp/tmph7k4k5gr/virtualenv-16.7.11.tar.gz.
+-- Checksum of /tmp/tmph7k4k5gr/virtualenv-16.7.11.tar.gz OK.
+-- Extracting '/tmp/tmph7k4k5gr/virtualenv-16.7.11.tar.gz' to '/tmp/tmph7k4k5gr'.
+-- Executing: ['/usr/bin/python3', 'virtualenv.py', '--python', '/usr/bin/python3', '/home/victim/lib/azure-cli']
+Already using interpreter /usr/bin/python3
+Using base prefix '/usr'
+New python executable in /home/victim/lib/azure-cli/bin/python3
+Also creating executable in /home/victim/lib/azure-cli/bin/python
+Installing setuptools, pip, wheel...
+done.
+-- Executing: ['/home/victim/lib/azure-cli/bin/pip', 'install', '--cache-dir', '/tmp/tmph7k4k5gr', 'azure-cli', '--upgrade']
+Collecting azure-cli
+  Downloading azure_cli-2.34.1-py3-none-any.whl (2.4 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.4/2.4 MB 16.7 MB/s eta 0:00:00
+Collecting azure-mgmt-managedservices~=1.0
+  Downloading azure_mgmt_managedservices-1.0.0-py2.py3-none-any.whl (38 kB)
+Collecting azure-mgmt-web~=6.1.0
+  Downloading azure_mgmt_web-6.1.0-py3-none-any.whl (3.9 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.9/3.9 MB 32.8 MB/s eta 0:00:00
+Collecting azure-mgmt-signalr~=1.0.0b2
+  Downloading azure_mgmt_signalr-1.0.0-py2.py3-none-any.whl (74 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 74.1/74.1 KB 538.4 kB/s eta 0:00:00
+Collecting azure-mgmt-devtestlabs~=4.0
+  Downloading azure_mgmt_devtestlabs-4.0.0-py2.py3-none-any.whl (137 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 137.0/137.0 KB 3.9 MB/s eta 0:00:00
+Collecting azure-mgmt-iothub==2.2.0
+  Downloading azure_mgmt_iothub-2.2.0-py3-none-any.whl (839 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 839.9/839.9 KB 15.3 MB/s eta 0:00:00
+Collecting azure-mgmt-loganalytics~=13.0.0b2
+  Downloading azure_mgmt_loganalytics-13.0.0b2-py3-none-any.whl (147 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 147.6/147.6 KB 4.5 MB/s eta 0:00:00
+Collecting azure-mgmt-synapse~=2.1.0b2
+  Downloading azure_mgmt_synapse-2.1.0b4-py3-none-any.whl (514 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 514.7/514.7 KB 13.3 MB/s eta 0:00:00
+Collecting azure-mgmt-cosmosdb~=7.0.0b2
+  Downloading azure_mgmt_cosmosdb-7.0.0b3-py3-none-any.whl (385 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 385.4/385.4 KB 9.5 MB/s eta 0:00:00
+Collecting colorama~=0.4.4
+  Downloading colorama-0.4.4-py2.py3-none-any.whl (16 kB)
+Collecting azure-mgmt-databoxedge~=1.0.0
+  Downloading azure_mgmt_databoxedge-1.0.0-py2.py3-none-any.whl (1.3 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 26.6 MB/s eta 0:00:00
+Collecting azure-mgmt-servicefabricmanagedclusters~=1.0.0
+  Downloading azure_mgmt_servicefabricmanagedclusters-1.0.0-py2.py3-none-any.whl (112 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 112.5/112.5 KB 3.7 MB/s eta 0:00:00
+Collecting azure-mgmt-servicefabric~=1.0.0
+  Downloading azure_mgmt_servicefabric-1.0.0-py2.py3-none-any.whl (139 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 139.6/139.6 KB 3.3 MB/s eta 0:00:00
+Collecting antlr4-python3-runtime~=4.7.2
+  Downloading antlr4-python3-runtime-4.7.2.tar.gz (112 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 112.3/112.3 KB 4.2 MB/s eta 0:00:00
+  Preparing metadata (setup.py) ... done
+Collecting azure-mgmt-policyinsights~=1.0.0
+  Downloading azure_mgmt_policyinsights-1.0.0-py2.py3-none-any.whl (78 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.7/78.7 KB 2.9 MB/s eta 0:00:00
+Collecting azure-mgmt-search~=8.0
+  Downloading azure_mgmt_search-8.0.0-py2.py3-none-any.whl (71 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.7/71.7 KB 2.3 MB/s eta 0:00:00
+Collecting azure-keyvault-administration==4.0.0b3
+  Downloading azure_keyvault_administration-4.0.0b3-py2.py3-none-any.whl (77 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 77.5/77.5 KB 2.8 MB/s eta 0:00:00
+Collecting azure-mgmt-kusto~=0.3.0
+  Downloading azure_mgmt_kusto-0.3.0-py2.py3-none-any.whl (73 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 73.9/73.9 KB 1.9 MB/s eta 0:00:00
+Collecting distro
+  Downloading distro-1.7.0-py3-none-any.whl (20 kB)
+Collecting azure-mgmt-marketplaceordering==1.1.0
+  Downloading azure_mgmt_marketplaceordering-1.1.0-py2.py3-none-any.whl (26 kB)
+Collecting azure-mgmt-rdbms~=10.0.0
+  Downloading azure_mgmt_rdbms-10.0.0-py2.py3-none-any.whl (644 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 645.0/645.0 KB 10.1 MB/s eta 0:00:00
+Collecting urllib3[secure]
+  Downloading urllib3-1.26.9-py2.py3-none-any.whl (138 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 139.0/139.0 KB 3.4 MB/s eta 0:00:00
+Collecting PyGithub~=1.38
+  Downloading PyGithub-1.55-py3-none-any.whl (291 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 291.7/291.7 KB 4.7 MB/s eta 0:00:00
+Collecting azure-mgmt-resource==20.0.0
+  Downloading azure_mgmt_resource-20.0.0-py2.py3-none-any.whl (2.3 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.3/2.3 MB 34.2 MB/s eta 0:00:00
+Collecting azure-multiapi-storage~=0.7.0
+  Downloading azure_multiapi_storage-0.7.0-py2.py3-none-any.whl (5.5 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.5/5.5 MB 26.5 MB/s eta 0:00:00
+Collecting azure-mgmt-eventhub~=9.1.0
+  Downloading azure_mgmt_eventhub-9.1.0-py2.py3-none-any.whl (383 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 383.5/383.5 KB 8.3 MB/s eta 0:00:00
+Collecting azure-mgmt-imagebuilder~=1.0.0
+  Downloading azure_mgmt_imagebuilder-1.0.0-py2.py3-none-any.whl (45 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 45.9/45.9 KB 2.2 MB/s eta 0:00:00
+Collecting azure-mgmt-msi~=0.2
+  Downloading azure_mgmt_msi-0.2.0-py2.py3-none-any.whl (17 kB)
+Collecting azure-mgmt-datamigration~=10.0.0
+  Downloading azure_mgmt_datamigration-10.0.0-py2.py3-none-any.whl (174 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 174.5/174.5 KB 4.1 MB/s eta 0:00:00
+Collecting azure-mgmt-advisor==9.0.0
+  Downloading azure_mgmt_advisor-9.0.0-py2.py3-none-any.whl (46 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 46.9/46.9 KB 2.5 MB/s eta 0:00:00
+Collecting azure-mgmt-botservice~=0.3.0
+  Downloading azure_mgmt_botservice-0.3.0-py2.py3-none-any.whl (37 kB)
+Collecting azure-mgmt-monitor~=3.0.0
+  Downloading azure_mgmt_monitor-3.0.0-py2.py3-none-any.whl (839 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 839.2/839.2 KB 17.9 MB/s eta 0:00:00
+Collecting azure-mgmt-media~=7.0
+  Downloading azure_mgmt_media-7.0.0-py2.py3-none-any.whl (219 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 219.1/219.1 KB 7.0 MB/s eta 0:00:00
+Collecting scp~=0.13.2
+  Downloading scp-0.13.6-py2.py3-none-any.whl (8.2 kB)
+Collecting azure-appconfiguration~=1.1.1
+  Downloading azure_appconfiguration-1.1.1-py2.py3-none-any.whl (37 kB)
+Collecting azure-loganalytics~=0.1.0
+  Downloading azure_loganalytics-0.1.1-py2.py3-none-any.whl (16 kB)
+Collecting semver==2.13.0
+  Downloading semver-2.13.0-py2.py3-none-any.whl (12 kB)
+Collecting azure-mgmt-storage~=19.1.0
+  Downloading azure_mgmt_storage-19.1.0-py3-none-any.whl (1.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 1.4 MB/s eta 0:00:00
+Collecting azure-mgmt-cdn==11.0.0
+  Downloading azure_mgmt_cdn-11.0.0-py2.py3-none-any.whl (252 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 252.7/252.7 KB 620.0 kB/s eta 0:00:00
+Collecting azure-mgmt-billing==6.0.0
+  Downloading azure_mgmt_billing-6.0.0-py2.py3-none-any.whl (166 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 167.0/167.0 KB 3.7 MB/s eta 0:00:00
+Collecting azure-mgmt-datalake-store~=0.5.0
+  Downloading azure_mgmt_datalake_store-0.5.0-py2.py3-none-any.whl (88 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 88.7/88.7 KB 2.7 MB/s eta 0:00:00
+Collecting azure-mgmt-reservations==0.6.0
+  Downloading azure_mgmt_reservations-0.6.0-py2.py3-none-any.whl (33 kB)
+Collecting azure-mgmt-security~=2.0.0b1
+  Downloading azure_mgmt_security-2.0.0b1-py2.py3-none-any.whl (344 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 344.9/344.9 KB 3.4 MB/s eta 0:00:00
+Collecting azure-mgmt-appconfiguration~=2.0.0
+  Downloading azure_mgmt_appconfiguration-2.0.0-py2.py3-none-any.whl (61 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 61.5/61.5 KB 2.4 MB/s eta 0:00:00
+Collecting azure-mgmt-managementgroups~=1.0.0
+  Downloading azure_mgmt_managementgroups-1.0.0-py2.py3-none-any.whl (58 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 58.1/58.1 KB 2.5 MB/s eta 0:00:00
+Collecting websocket-client~=0.56.0
+  Downloading websocket_client-0.56.0-py2.py3-none-any.whl (200 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 200.6/200.6 KB 5.9 MB/s eta 0:00:00
+Collecting sshtunnel~=0.1.4
+  Downloading sshtunnel-0.1.5-py2.py3-none-any.whl (23 kB)
+Collecting azure-mgmt-servicelinker==1.0.0b1
+  Downloading azure_mgmt_servicelinker-1.0.0b1-py2.py3-none-any.whl (32 kB)
+Collecting azure-keyvault-keys==4.5.0b6
+  Downloading azure_keyvault_keys-4.5.0b6-py3-none-any.whl (372 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 373.0/373.0 KB 9.3 MB/s eta 0:00:00
+Collecting azure-mgmt-redhatopenshift==1.0.0
+  Downloading azure_mgmt_redhatopenshift-1.0.0-py2.py3-none-any.whl (41 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 41.1/41.1 KB 1.4 MB/s eta 0:00:00
+Collecting azure-synapse-spark~=0.2.0
+  Downloading azure_synapse_spark-0.2.0-py2.py3-none-any.whl (29 kB)
+Collecting azure-mgmt-dns~=8.0.0
+  Downloading azure_mgmt_dns-8.0.0-py2.py3-none-any.whl (118 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 118.9/118.9 KB 3.4 MB/s eta 0:00:00
+Collecting azure-mgmt-batchai~=7.0.0b1
+  Downloading azure_mgmt_batchai-7.0.0b1-py2.py3-none-any.whl (99 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 99.1/99.1 KB 92.2 kB/s eta 0:00:00
+Collecting azure-mgmt-redis~=13.1.0
+  Downloading azure_mgmt_redis-13.1.0-py2.py3-none-any.whl (87 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 88.0/88.0 KB 1.9 MB/s eta 0:00:00
+Collecting azure-mgmt-servicebus~=7.1.0
+  Downloading azure_mgmt_servicebus-7.1.0-py2.py3-none-any.whl (539 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 539.2/539.2 KB 13.0 MB/s eta 0:00:00
+Collecting azure-mgmt-iothubprovisioningservices==1.1.0
+  Downloading azure_mgmt_iothubprovisioningservices-1.1.0-py3-none-any.whl (52 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 52.5/52.5 KB 446.7 kB/s eta 0:00:00
+Collecting azure-mgmt-containerregistry==8.2.0
+  Downloading azure_mgmt_containerregistry-8.2.0-py2.py3-none-any.whl (928 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 928.0/928.0 KB 18.6 MB/s eta 0:00:00
+Collecting azure-mgmt-network~=19.3.0
+  Downloading azure_mgmt_network-19.3.0-py2.py3-none-any.whl (21.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 21.1/21.1 MB 23.5 MB/s eta 0:00:00
+Collecting xmltodict~=0.12
+  Downloading xmltodict-0.12.0-py2.py3-none-any.whl (9.2 kB)
+Collecting azure-mgmt-batch~=16.0.0
+  Downloading azure_mgmt_batch-16.0.0-py2.py3-none-any.whl (139 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 139.6/139.6 KB 3.0 MB/s eta 0:00:00
+Collecting azure-mgmt-consumption~=2.0
+  Downloading azure_mgmt_consumption-2.0.0-py2.py3-none-any.whl (46 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 46.3/46.3 KB 1.4 MB/s eta 0:00:00
+Collecting jsondiff~=1.3.0
+  Downloading jsondiff-1.3.1.tar.gz (6.5 kB)
+  Preparing metadata (setup.py) ... done
+Collecting azure-mgmt-privatedns~=1.0.0
+  Downloading azure_mgmt_privatedns-1.0.0-py2.py3-none-any.whl (43 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.0/44.0 KB 1.2 MB/s eta 0:00:00
+Collecting fabric~=2.4
+  Downloading fabric-2.6.0-py2.py3-none-any.whl (53 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 53.1/53.1 KB 2.5 MB/s eta 0:00:00
+Collecting azure-mgmt-sqlvirtualmachine~=1.0.0b1
+  Downloading azure_mgmt_sqlvirtualmachine-1.0.0b2-py3-none-any.whl (57 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 57.9/57.9 KB 3.8 MB/s eta 0:00:00
+Collecting chardet~=3.0.4
+  Downloading chardet-3.0.4-py2.py3-none-any.whl (133 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 133.4/133.4 KB 4.1 MB/s eta 0:00:00
+Collecting azure-mgmt-recoveryservices~=2.0.0
+  Downloading azure_mgmt_recoveryservices-2.0.0-py2.py3-none-any.whl (79 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 79.7/79.7 KB 3.2 MB/s eta 0:00:00
+Collecting azure-mgmt-relay~=0.1.0
+  Downloading azure_mgmt_relay-0.1.0-py2.py3-none-any.whl (36 kB)
+Collecting packaging<22.0,>=20.9
+  Downloading packaging-21.3-py3-none-any.whl (40 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 40.8/40.8 KB 2.5 MB/s eta 0:00:00
+Collecting azure-mgmt-datalake-analytics~=0.2.1
+  Downloading azure_mgmt_datalake_analytics-0.2.1-py2.py3-none-any.whl (146 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 146.6/146.6 KB 3.6 MB/s eta 0:00:00
+Collecting azure-batch~=12.0.0
+  Downloading azure_batch-12.0.0-py2.py3-none-any.whl (231 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 231.3/231.3 KB 5.7 MB/s eta 0:00:00
+Collecting azure-cosmos>=3.0.2,~=3.0
+  Downloading azure_cosmos-3.2.0-py2.py3-none-any.whl (106 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 106.6/106.6 KB 3.4 MB/s eta 0:00:00
+Collecting azure-mgmt-cognitiveservices~=13.0.0
+  Downloading azure_mgmt_cognitiveservices-13.0.0-py2.py3-none-any.whl (99 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 99.9/99.9 KB 3.0 MB/s eta 0:00:00
+Collecting azure-mgmt-recoveryservicesbackup~=4.0.0
+  Downloading azure_mgmt_recoveryservicesbackup-4.0.0-py2.py3-none-any.whl (595 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 595.0/595.0 KB 11.1 MB/s eta 0:00:00
+Collecting azure-mgmt-netapp~=6.0.1
+  Downloading azure_mgmt_netapp-6.0.1-py3-none-any.whl (130 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 130.7/130.7 KB 2.5 MB/s eta 0:00:00
+Collecting PyNaCl~=1.4.0
+  Downloading PyNaCl-1.4.0-cp35-abi3-manylinux1_x86_64.whl (961 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 961.1/961.1 KB 21.8 MB/s eta 0:00:00
+Collecting azure-mgmt-iotcentral~=9.0.0
+  Downloading azure_mgmt_iotcentral-9.0.0-py2.py3-none-any.whl (31 kB)
+Collecting azure-keyvault~=1.1.0
+  Downloading azure_keyvault-1.1.0-py2.py3-none-any.whl (352 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 352.3/352.3 KB 11.1 MB/s eta 0:00:00
+Collecting azure-mgmt-deploymentmanager~=0.2.0
+  Downloading azure_mgmt_deploymentmanager-0.2.0-py2.py3-none-any.whl (41 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 41.4/41.4 KB 1.4 MB/s eta 0:00:00
+Collecting azure-synapse-accesscontrol~=0.5.0
+  Downloading azure_synapse_accesscontrol-0.5.0-py2.py3-none-any.whl (30 kB)
+Collecting azure-mgmt-compute~=25.0.0
+  Downloading azure_mgmt_compute-25.0.0-py3-none-any.whl (4.7 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.7/4.7 MB 43.1 MB/s eta 0:00:00
+Collecting javaproperties~=0.5.1
+  Downloading javaproperties-0.5.2-py2.py3-none-any.whl (19 kB)
+Collecting azure-datalake-store~=0.0.49
+  Downloading azure_datalake_store-0.0.52-py2.py3-none-any.whl (61 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 61.7/61.7 KB 1.9 MB/s eta 0:00:00
+Collecting azure-synapse-artifacts~=0.10.0
+  Downloading azure_synapse_artifacts-0.10.0-py2.py3-none-any.whl (630 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 630.7/630.7 KB 15.0 MB/s eta 0:00:00
+Collecting six>=1.10.0
+  Downloading six-1.16.0-py2.py3-none-any.whl (11 kB)
+Collecting azure-mgmt-applicationinsights~=1.0.0
+  Downloading azure_mgmt_applicationinsights-1.0.0-py2.py3-none-any.whl (302 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 303.0/303.0 KB 6.3 MB/s eta 0:00:00
+Collecting azure-cli-core==2.34.1
+  Downloading azure_cli_core-2.34.1-py3-none-any.whl (179 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 179.4/179.4 KB 6.3 MB/s eta 0:00:00
+Collecting azure-identity
+  Downloading azure_identity-1.8.0-py3-none-any.whl (130 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 130.8/130.8 KB 1.4 MB/s eta 0:00:00
+Collecting azure-mgmt-sql~=3.0.1
+  Downloading azure_mgmt_sql-3.0.1-py2.py3-none-any.whl (912 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 912.9/912.9 KB 17.8 MB/s eta 0:00:00
+Collecting azure-synapse-managedprivateendpoints~=0.3.0
+  Downloading azure_synapse_managedprivateendpoints-0.3.0-py2.py3-none-any.whl (19 kB)
+Collecting azure-mgmt-containerinstance~=9.1.0
+  Downloading azure_mgmt_containerinstance-9.1.0-py2.py3-none-any.whl (58 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 58.0/58.0 KB 3.7 MB/s eta 0:00:00
+Collecting azure-mgmt-trafficmanager~=1.0.0
+  Downloading azure_mgmt_trafficmanager-1.0.0-py3-none-any.whl (49 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 49.3/49.3 KB 1.8 MB/s eta 0:00:00
+Collecting azure-storage-common~=1.4
+  Downloading azure_storage_common-1.4.2-py2.py3-none-any.whl (47 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 47.4/47.4 KB 2.0 MB/s eta 0:00:00
+Collecting azure-graphrbac~=0.60.0
+  Downloading azure_graphrbac-0.60.0-py2.py3-none-any.whl (139 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 139.7/139.7 KB 4.8 MB/s eta 0:00:00
+Collecting azure-mgmt-hdinsight~=9.0.0
+  Downloading azure_mgmt_hdinsight-9.0.0-py2.py3-none-any.whl (125 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 125.7/125.7 KB 2.8 MB/s eta 0:00:00
+Collecting azure-mgmt-extendedlocation~=1.0.0b2
+  Downloading azure_mgmt_extendedlocation-1.0.0-py2.py3-none-any.whl (64 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.4/64.4 KB 3.9 MB/s eta 0:00:00
+Collecting azure-mgmt-eventgrid==9.0.0
+  Downloading azure_mgmt_eventgrid-9.0.0-py2.py3-none-any.whl (178 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 178.4/178.4 KB 5.7 MB/s eta 0:00:00
+Collecting azure-mgmt-authorization~=0.61.0
+  Downloading azure_mgmt_authorization-0.61.0-py2.py3-none-any.whl (94 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 94.5/94.5 KB 2.6 MB/s eta 0:00:00
+Collecting azure-mgmt-apimanagement~=3.0.0
+  Downloading azure_mgmt_apimanagement-3.0.0-py3-none-any.whl (588 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 588.2/588.2 KB 15.0 MB/s eta 0:00:00
+Collecting azure-mgmt-containerservice~=17.0.0
+  Downloading azure_mgmt_containerservice-17.0.0-py3-none-any.whl (2.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.2/2.2 MB 25.6 MB/s eta 0:00:00
+Collecting azure-mgmt-keyvault==9.3.0
+  Downloading azure_mgmt_keyvault-9.3.0-py2.py3-none-any.whl (412 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 412.4/412.4 KB 9.7 MB/s eta 0:00:00
+Collecting azure-mgmt-maps~=2.0.0
+  Downloading azure_mgmt_maps-2.0.0-py2.py3-none-any.whl (38 kB)
+Collecting argcomplete~=1.8
+  Downloading argcomplete-1.12.3-py2.py3-none-any.whl (38 kB)
+Collecting cryptography
+  Downloading cryptography-36.0.2-cp36-abi3-manylinux_2_24_x86_64.whl (3.6 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.6/3.6 MB 28.2 MB/s eta 0:00:00
+Collecting msal<2.0.0,>=1.16.0
+  Downloading msal-1.17.0-py2.py3-none-any.whl (79 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 79.3/79.3 KB 1.7 MB/s eta 0:00:00
+Collecting knack~=0.9.0
+  Downloading knack-0.9.0-py3-none-any.whl (59 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 59.8/59.8 KB 2.4 MB/s eta 0:00:00
+Collecting humanfriendly~=10.0
+  Downloading humanfriendly-10.0-py2.py3-none-any.whl (86 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 86.8/86.8 KB 1.7 MB/s eta 0:00:00
+Collecting azure-mgmt-core<2,>=1.2.0
+  Downloading azure_mgmt_core-1.3.0-py2.py3-none-any.whl (25 kB)
+Collecting pyopenssl>=17.1.0
+  Downloading pyOpenSSL-22.0.0-py2.py3-none-any.whl (55 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 55.8/55.8 KB 1.4 MB/s eta 0:00:00
+Collecting requests[socks]
+  Downloading requests-2.27.1-py2.py3-none-any.whl (63 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 63.1/63.1 KB 3.1 MB/s eta 0:00:00
+Collecting PyJWT>=2.1.0
+  Downloading PyJWT-2.3.0-py3-none-any.whl (16 kB)
+Collecting azure-cli-telemetry==1.0.6.*
+  Downloading azure_cli_telemetry-1.0.6-py3-none-any.whl (10 kB)
+Collecting jmespath
+  Downloading jmespath-1.0.0-py3-none-any.whl (23 kB)
+Collecting paramiko<3.0.0,>=2.0.8
+  Downloading paramiko-2.10.2-py2.py3-none-any.whl (211 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 212.0/212.0 KB 6.8 MB/s eta 0:00:00
+Collecting msrestazure~=0.6.4
+  Downloading msrestazure-0.6.4-py2.py3-none-any.whl (40 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 40.5/40.5 KB 1.4 MB/s eta 0:00:00
+Collecting msal-extensions<0.4,>=0.3.1
+  Downloading msal_extensions-0.3.1-py2.py3-none-any.whl (18 kB)
+Collecting pkginfo>=1.5.0.1
+  Downloading pkginfo-1.8.2-py2.py3-none-any.whl (26 kB)
+Collecting psutil~=5.9
+  Downloading psutil-5.9.0-cp38-cp38-manylinux_2_12_x86_64.manylinux2010_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (283 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 283.8/283.8 KB 3.5 MB/s eta 0:00:00
+Collecting azure-core<2.0.0,>=1.7.0
+  Downloading azure_core-1.23.0-py3-none-any.whl (179 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 179.3/179.3 KB 2.0 MB/s eta 0:00:00
+Collecting msrest>=0.6.21
+  Downloading msrest-0.6.21-py2.py3-none-any.whl (85 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 85.2/85.2 KB 2.5 MB/s eta 0:00:00
+Collecting azure-common~=1.1
+  Downloading azure_common-1.1.28-py2.py3-none-any.whl (14 kB)
+Collecting applicationinsights<0.12,>=0.11.1
+  Downloading applicationinsights-0.11.10-py2.py3-none-any.whl (55 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 55.1/55.1 KB 1.1 MB/s eta 0:00:00
+Collecting portalocker~=1.2
+  Downloading portalocker-1.7.1-py2.py3-none-any.whl (10 kB)
+Collecting adal>=0.4.2
+  Downloading adal-1.2.7-py2.py3-none-any.whl (55 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 55.5/55.5 KB 2.0 MB/s eta 0:00:00
+Collecting cffi
+  Downloading cffi-1.15.0-cp38-cp38-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (446 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 446.7/446.7 KB 9.4 MB/s eta 0:00:00
+Collecting azure-nspkg>=2.0.0
+  Downloading azure_nspkg-3.0.2-py3-none-any.whl (1.5 kB)
+Collecting azure-mgmt-nspkg>=2.0.0
+  Downloading azure_mgmt_nspkg-3.0.2-py3-none-any.whl (1.6 kB)
+Collecting azure-mgmt-datalake-nspkg>=2.0.0
+  Downloading azure_mgmt_datalake_nspkg-3.0.1-py3-none-any.whl (1.7 kB)
+Collecting python-dateutil
+  Downloading python_dateutil-2.8.2-py2.py3-none-any.whl (247 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 247.7/247.7 KB 5.1 MB/s eta 0:00:00
+Collecting pathlib2
+  Downloading pathlib2-2.3.7.post1-py2.py3-none-any.whl (18 kB)
+Collecting invoke<2.0,>=1.3
+  Downloading invoke-1.6.0-py3-none-any.whl (212 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 212.0/212.0 KB 1.3 MB/s eta 0:00:00
+Collecting pyparsing!=3.0.5,>=2.0.2
+  Downloading pyparsing-3.0.7-py3-none-any.whl (98 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 98.0/98.0 KB 2.2 MB/s eta 0:00:00
+Collecting deprecated
+  Downloading Deprecated-1.2.13-py2.py3-none-any.whl (9.6 kB)
+Collecting certifi
+  Downloading certifi-2021.10.8-py2.py3-none-any.whl (149 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 149.2/149.2 KB 3.1 MB/s eta 0:00:00
+Collecting idna>=2.0.0
+  Downloading idna-3.3-py3-none-any.whl (61 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 61.2/61.2 KB 2.3 MB/s eta 0:00:00
+Collecting typing-extensions>=4.0.1
+  Downloading typing_extensions-4.1.1-py3-none-any.whl (26 kB)
+Collecting pycparser
+  Downloading pycparser-2.21-py2.py3-none-any.whl (118 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 118.7/118.7 KB 113.2 kB/s eta 0:00:00
+Collecting pyyaml
+  Downloading PyYAML-6.0-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl (701 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 701.2/701.2 KB 13.1 MB/s eta 0:00:00
+Collecting pygments
+  Downloading Pygments-2.11.2-py3-none-any.whl (1.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.1/1.1 MB 12.8 MB/s eta 0:00:00
+Collecting tabulate
+  Downloading tabulate-0.8.9-py3-none-any.whl (25 kB)
+Collecting isodate>=0.6.0
+  Downloading isodate-0.6.1-py2.py3-none-any.whl (41 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 41.7/41.7 KB 1.8 MB/s eta 0:00:00
+Collecting requests-oauthlib>=0.5.0
+  Downloading requests_oauthlib-1.3.1-py2.py3-none-any.whl (23 kB)
+Collecting bcrypt>=3.1.3
+  Downloading bcrypt-3.2.0-cp36-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_24_x86_64.whl (61 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 61.9/61.9 KB 2.9 MB/s eta 0:00:00
+Collecting charset-normalizer~=2.0.0
+  Downloading charset_normalizer-2.0.12-py3-none-any.whl (39 kB)
+Collecting wrapt<2,>=1.10
+  Downloading wrapt-1.14.0-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (80 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 81.0/81.0 KB 2.6 MB/s eta 0:00:00
+Collecting PySocks!=1.5.7,>=1.5.6
+  Downloading PySocks-1.7.1-py3-none-any.whl (16 kB)
+Collecting oauthlib>=3.0.0
+  Downloading oauthlib-3.2.0-py3-none-any.whl (151 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.5/151.5 KB 3.6 MB/s eta 0:00:00
+Building wheels for collected packages: antlr4-python3-runtime, jsondiff
+  Building wheel for antlr4-python3-runtime (setup.py) ... done
+  Created wheel for antlr4-python3-runtime: filename=antlr4_python3_runtime-4.7.2-py3-none-any.whl size=140949 sha256=1ee3df33944fb56fa550dfdbd6d062763658323eefc1db68ad18af446a025d12
+  Stored in directory: /tmp/tmph7k4k5gr/wheels/63/93/52/480c17789fbf685f5d0e33e83c311f4a844cd6e2f5cf036c03
+  Building wheel for jsondiff (setup.py) ... done
+  Created wheel for jsondiff: filename=jsondiff-1.3.1-py3-none-any.whl size=6620 sha256=fe9e4abd957561704a54a9745b0f31d2c8b932447ad80564914c448555d44925
+  Stored in directory: /tmp/tmph7k4k5gr/wheels/8e/aa/ed/53bdaa64c4c29f7f389572280e9560dbc29adbbc7663a6f92d
+Successfully built antlr4-python3-runtime jsondiff
+Installing collected packages: tabulate, portalocker, pkginfo, jsondiff, invoke, chardet, certifi, azure-nspkg, azure-common, argcomplete, applicationinsights, antlr4-python3-runtime, xmltodict, wrapt, urllib3, typing-extensions, six, semver, pyyaml, PySocks, pyparsing, PyJWT, pygments, pycparser, psutil, oauthlib, jmespath, idna, humanfriendly, distro, colorama, charset-normalizer, azure-mgmt-nspkg, azure-cli-telemetry, websocket-client, requests, python-dateutil, pathlib2, packaging, knack, javaproperties, isodate, deprecated, cffi, azure-mgmt-datalake-nspkg, requests-oauthlib, PyNaCl, cryptography, bcrypt, azure-cosmos, azure-core, pyopenssl, PyGithub, paramiko, msrest, azure-storage-common, azure-mgmt-core, adal, sshtunnel, scp, msrestazure, msal, fabric, azure-synapse-spark, azure-synapse-managedprivateendpoints, azure-synapse-artifacts, azure-synapse-accesscontrol, azure-multiapi-storage, azure-mgmt-web, azure-mgmt-trafficmanager, azure-mgmt-synapse, azure-mgmt-storage, azure-mgmt-sqlvirtualmachine, azure-mgmt-sql, azure-mgmt-signalr, azure-mgmt-servicelinker, azure-mgmt-servicefabricmanagedclusters, azure-mgmt-servicefabric, azure-mgmt-servicebus, azure-mgmt-security, azure-mgmt-search, azure-mgmt-resource, azure-mgmt-redis, azure-mgmt-redhatopenshift, azure-mgmt-recoveryservicesbackup, azure-mgmt-recoveryservices, azure-mgmt-rdbms, azure-mgmt-privatedns, azure-mgmt-policyinsights, azure-mgmt-network, azure-mgmt-netapp, azure-mgmt-monitor, azure-mgmt-media, azure-mgmt-marketplaceordering, azure-mgmt-maps, azure-mgmt-managementgroups, azure-mgmt-loganalytics, azure-mgmt-keyvault, azure-mgmt-iothubprovisioningservices, azure-mgmt-iothub, azure-mgmt-iotcentral, azure-mgmt-imagebuilder, azure-mgmt-hdinsight, azure-mgmt-extendedlocation, azure-mgmt-eventhub, azure-mgmt-eventgrid, azure-mgmt-dns, azure-mgmt-datamigration, azure-mgmt-databoxedge, azure-mgmt-cosmosdb, azure-mgmt-containerservice, azure-mgmt-containerregistry, azure-mgmt-containerinstance, azure-mgmt-compute, azure-mgmt-cognitiveservices, azure-mgmt-cdn, azure-mgmt-billing, azure-mgmt-batchai, azure-mgmt-batch, azure-mgmt-applicationinsights, azure-mgmt-appconfiguration, azure-mgmt-apimanagement, azure-mgmt-advisor, azure-loganalytics, azure-keyvault-keys, azure-keyvault-administration, azure-datalake-store, azure-appconfiguration, msal-extensions, azure-mgmt-reservations, azure-mgmt-relay, azure-mgmt-msi, azure-mgmt-managedservices, azure-mgmt-kusto, azure-mgmt-devtestlabs, azure-mgmt-deploymentmanager, azure-mgmt-datalake-store, azure-mgmt-datalake-analytics, azure-mgmt-consumption, azure-mgmt-botservice, azure-mgmt-authorization, azure-keyvault, azure-graphrbac, azure-batch, azure-identity, azure-cli-core, azure-cli
+Successfully installed PyGithub-1.55 PyJWT-2.3.0 PyNaCl-1.4.0 PySocks-1.7.1 adal-1.2.7 antlr4-python3-runtime-4.7.2 applicationinsights-0.11.10 argcomplete-1.12.3 azure-appconfiguration-1.1.1 azure-batch-12.0.0 azure-cli-2.34.1 azure-cli-core-2.34.1 azure-cli-telemetry-1.0.6 azure-common-1.1.28 azure-core-1.23.0 azure-cosmos-3.2.0 azure-datalake-store-0.0.52 azure-graphrbac-0.60.0 azure-identity-1.8.0 azure-keyvault-1.1.0 azure-keyvault-administration-4.0.0b3 azure-keyvault-keys-4.5.0b6 azure-loganalytics-0.1.1 azure-mgmt-advisor-9.0.0 azure-mgmt-apimanagement-3.0.0 azure-mgmt-appconfiguration-2.0.0 azure-mgmt-applicationinsights-1.0.0 azure-mgmt-authorization-0.61.0 azure-mgmt-batch-16.0.0 azure-mgmt-batchai-7.0.0b1 azure-mgmt-billing-6.0.0 azure-mgmt-botservice-0.3.0 azure-mgmt-cdn-11.0.0 azure-mgmt-cognitiveservices-13.0.0 azure-mgmt-compute-25.0.0 azure-mgmt-consumption-2.0.0 azure-mgmt-containerinstance-9.1.0 azure-mgmt-containerregistry-8.2.0 azure-mgmt-containerservice-17.0.0 azure-mgmt-core-1.3.0 azure-mgmt-cosmosdb-7.0.0b3 azure-mgmt-databoxedge-1.0.0 azure-mgmt-datalake-analytics-0.2.1 azure-mgmt-datalake-nspkg-3.0.1 azure-mgmt-datalake-store-0.5.0 azure-mgmt-datamigration-10.0.0 azure-mgmt-deploymentmanager-0.2.0 azure-mgmt-devtestlabs-4.0.0 azure-mgmt-dns-8.0.0 azure-mgmt-eventgrid-9.0.0 azure-mgmt-eventhub-9.1.0 azure-mgmt-extendedlocation-1.0.0 azure-mgmt-hdinsight-9.0.0 azure-mgmt-imagebuilder-1.0.0 azure-mgmt-iotcentral-9.0.0 azure-mgmt-iothub-2.2.0 azure-mgmt-iothubprovisioningservices-1.1.0 azure-mgmt-keyvault-9.3.0 azure-mgmt-kusto-0.3.0 azure-mgmt-loganalytics-13.0.0b2 azure-mgmt-managedservices-1.0.0 azure-mgmt-managementgroups-1.0.0 azure-mgmt-maps-2.0.0 azure-mgmt-marketplaceordering-1.1.0 azure-mgmt-media-7.0.0 azure-mgmt-monitor-3.0.0 azure-mgmt-msi-0.2.0 azure-mgmt-netapp-6.0.1 azure-mgmt-network-19.3.0 azure-mgmt-nspkg-3.0.2 azure-mgmt-policyinsights-1.0.0 azure-mgmt-privatedns-1.0.0 azure-mgmt-rdbms-10.0.0 azure-mgmt-recoveryservices-2.0.0 azure-mgmt-recoveryservicesbackup-4.0.0 azure-mgmt-redhatopenshift-1.0.0 azure-mgmt-redis-13.1.0 azure-mgmt-relay-0.1.0 azure-mgmt-reservations-0.6.0 azure-mgmt-resource-20.0.0 azure-mgmt-search-8.0.0 azure-mgmt-security-2.0.0b1 azure-mgmt-servicebus-7.1.0 azure-mgmt-servicefabric-1.0.0 azure-mgmt-servicefabricmanagedclusters-1.0.0 azure-mgmt-servicelinker-1.0.0b1 azure-mgmt-signalr-1.0.0 azure-mgmt-sql-3.0.1 azure-mgmt-sqlvirtualmachine-1.0.0b2 azure-mgmt-storage-19.1.0 azure-mgmt-synapse-2.1.0b4 azure-mgmt-trafficmanager-1.0.0 azure-mgmt-web-6.1.0 azure-multiapi-storage-0.7.0 azure-nspkg-3.0.2 azure-storage-common-1.4.2 azure-synapse-accesscontrol-0.5.0 azure-synapse-artifacts-0.10.0 azure-synapse-managedprivateendpoints-0.3.0 azure-synapse-spark-0.2.0 bcrypt-3.2.0 certifi-2021.10.8 cffi-1.15.0 chardet-3.0.4 charset-normalizer-2.0.12 colorama-0.4.4 cryptography-36.0.2 deprecated-1.2.13 distro-1.7.0 fabric-2.6.0 humanfriendly-10.0 idna-3.3 invoke-1.6.0 isodate-0.6.1 javaproperties-0.5.2 jmespath-1.0.0 jsondiff-1.3.1 knack-0.9.0 msal-1.17.0 msal-extensions-0.3.1 msrest-0.6.21 msrestazure-0.6.4 oauthlib-3.2.0 packaging-21.3 paramiko-2.10.2 pathlib2-2.3.7.post1 pkginfo-1.8.2 portalocker-1.7.1 psutil-5.9.0 pycparser-2.21 pygments-2.11.2 pyopenssl-22.0.0 pyparsing-3.0.7 python-dateutil-2.8.2 pyyaml-6.0 requests-2.27.1 requests-oauthlib-1.3.1 scp-0.13.6 semver-2.13.0 six-1.16.0 sshtunnel-0.1.5 tabulate-0.8.9 typing-extensions-4.1.1 urllib3-1.26.9 websocket-client-0.56.0 wrapt-1.14.0 xmltodict-0.12.0
+-- The executable is available at '/home/victim/bin/az'.
+-- Created tab completion file at '/home/victim/lib/azure-cli/az.completion'
+
+===> Modify profile to update your $PATH and enable shell/tab completion now? (Y/n): 
+
+===> Enter a path to an rc file to update (leave blank to use '/home/victim/.bashrc'): 
+-- Backed up '/home/victim/.bashrc' to '/home/victim/.bashrc.backup'
+-- Tab completion set up complete.
+-- If tab completion is not activated, verify that '/home/victim/.bashrc' is sourced by your shell.
+-- 
+-- ** Run `exec -l $SHELL` to restart your shell. **
+-- 
+-- Installation successful.
+-- Run the CLI with /home/victim/bin/az --help
+victim@scw-angry-chandrasekhar:~$ ls -lad bin
+drwxrwxr-x 2 victim victim 4096 Mär 17 14:07 bin
+victim@scw-angry-chandrasekhar:~$ az storage copy
+Positional argument '<EXTRA_OPTIONS>' is experimental and under development. Reference and support levels: https://aka.ms/CLI_refstatus
+Azcopy command: ['/home/victim/bin/azcopy', 'copy', 'https://None.blob.core.windows.net', 'https://None.blob.core.windows.net']
+INFO: Scanning...
+
+failed to perform copy command due to error: Login Credentials missing. No SAS token or OAuth token is present and the resource is not public
+Failed to perform copy operation.
+victim@scw-angry-chandrasekhar:~$ ls -lad bin
+drwxrwxrwx 2 victim victim 4096 Mär 17 14:09 bin
+victim@scw-angry-chandrasekhar:~$ 

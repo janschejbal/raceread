@@ -54,11 +54,12 @@ In many cases, these files are stored in the user's home directory. Unfortunatel
 The following software was found to be vulnerable at some point in time:
 
 * [Backblaze B2 cli and Python SDK](writeups/backblaze_b2.md) (fixed)
-* [Microsoft Azure CLI](writeups/microsoft_azure_cli.md)
-  * not this exact issue, file was simply left world-readable forever (I believe this was **not fixed** as of 2022-03-14)
+* Microsoft Azure CLI
+  * not this exact issue, [file was simply left world-readable forever](writeups/microsoft_azure_cli.md) (fixed)
+  * [a variant of this vulnerability, discovered together with another permission issue allowing code execution as another local user](writeups/microsoft_azure_cli_2.md) (fixed)
   * also affected by the Paramiko vulnerability in some uncommon situations
 * [Paramiko](writeups/paramiko.md) (fixed)
-* (to be continued as advisories are released)
+* [Python shutil.copy2](writeups/python.md) (not fixed as of 2022-09-08)
 
 ## Credits
 
